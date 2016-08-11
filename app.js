@@ -45,6 +45,7 @@ var routes = require('./routes')(app);
 var users = require('./routes/user')(app);
 var admin = require('./routes/admin')(app);
 var question = require('./routes/question')(app);
+var question = require('./routes/fn')(app);
 
 
 
@@ -78,6 +79,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
