@@ -1,0 +1,36 @@
+<% layout('layout') -%>
+
+<div ng-controller="loginController">
+    <input type="text" placeholder="Username" ng-model="user.username" id="username">
+    <input type="password" placeholder="Password" ng-model="user.password" ng-keyup="isSubmit($event.keyCode)" id="password" >
+    <input type="button" value="Login" ng-click="submitForm()" id="login">
+</div>
+
+<script type="text/javascript">
+
+    var app = angular.module('loginApp', []);
+
+    app.controller('loginController', function($scope, $http) {
+        $scope.user = {};
+        $scope.submitForm = function() {
+            $http({
+              method  : 'POST',
+              url     : 'login',
+              data    : $scope.user,
+             }).success(function(data) {
+              console.log(data);
+              // alert(data);
+              // redirect based on role // bhavalan will do this and create page accordingly
+              data.status ? window.location = '/welcome' : alert('invalid credentials');
+            });
+        };
+
+        $scope.isSubmit = function(keycode) {
+          // if(keycode == 13) $('[value=Login]').trigger('click');
+          //angular.element('[value=Login]').triggerHandler('click');
+        }
+    });
+
+    
+
+</script>
