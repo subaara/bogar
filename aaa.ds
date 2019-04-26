@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase  name= '' description='' author='' version=''>
+<dpl filename='&quot;&quot;' exectype='' errorhandling='' type='HashDPL'/>
+<fallback useFallback='false'/>
+<shadowdom useShadowDOM='false'/>
+<step action='navigateTo' value='"http://sahitest.com/"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='navigateTo' value='' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Testing in Chedjdjkd' isThinkTime='false' isCommented='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='click' value='_link(&quot;demo&quot;)' selected='true'/>
+   <accessor type='click' value='_link(0)' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='click' value='_link(&quot;File Upload Test&quot;)' selected='true'/>
+   <accessor type='click' value='_link(20)' selected='false'/>
+</dialect>
+</step>
+<step action='setFile' value='"{ds}/test.txt"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='setFile' value='_byXPath(&apos;//*[@id=&quot;file&quot;]&apos;)' selected='true'/>
+   <accessor type='setFile' value='_byXPath(&apos;//*[\@id=&quot;file&quot;]&apos;)' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='click' value='_submit(&quot;submit&quot;)' selected='true'/>
+   <accessor type='click' value='_byXPath(&apos;//*[@name=&quot;submit&quot;]&apos;)' selected='false'/>
+   <accessor type='click' value='_submit(0)' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='click' value='_span(&quot;0.0048828125 Kb&quot;)' selected='true'/>
+   <accessor type='click' value='_byXPath(&apos;//*[@id=&quot;size&quot;]&apos;)' selected='false'/>
+   <accessor type='click' value='_span(3)' selected='false'/>
+   <accessor type='click' value='_span(&quot;size&quot;)' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='click' value='_link(&quot;Back to form&quot;)' selected='true'/>
+   <accessor type='click' value='_byXPath(&apos;//*[text()=&quot;Back to form&quot;]&apos;)' selected='false'/>
+   <accessor type='click' value='_link(0)' selected='false'/>
+</dialect>
+</step>
+</testcase>
