@@ -1,0 +1,144 @@
+<!--
+*
+* Appvance Inc. Confidential
+* ________________
+*
+*  Copyright 2018 Appvance Inc. All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Appvance Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Appvance Inc.
+* and its suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Appvance Incorporated.
+*
+* This file is subject to the terms and conditions defined in
+* file 'LICENSE.txt', which is part of this source code package.
+-->
+<testscenario xmlns="www.pushtotest.com/tm5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.pushtotest.com/XSD/testscenario.xsd" version="2.0">
+  <basics>
+    <name>s.scenario</name>
+    <defaultdirectory/>
+    <basicName/>
+    <creator/>
+    <versions/>
+    <categorization/>
+    <links>    </links>
+  </basics>
+  <resources/>
+  <testnodes>
+    <node name="localhost" location="http://localhost:8080/TMServer/ws/TestNode"/>
+  </testnodes>
+  <bundles>
+    <bundle name="hibernate" version="3.0"/>
+    <bundle name="mysql" version="5.1.39"/>
+    <bundle name="oracle" version="10.2.0.5"/>
+  </bundles>
+  <datasources/>
+  <options>
+    <options type="global">
+      <opt name="trustAllSSLCertificates" value="false"/>
+      <opt name="ntlmEnabled" value="false"/>
+      <opt name="EnableHttpTimingDetailsLogging" value="false"/>
+      <opt name="ConsoleAsProxy" value="false"/>
+    </options>
+    <options type="apc">
+      <opt name="SummaryStepIsEmpty" value="false"/>
+      <opt name="DynamicIpAddress" value="false"/>
+      <opt name="EnableSavingLogs" value="true"/>
+      <opt name="PercentageLogsSaved" value="100"/>
+      <opt name="AlwaysSaveLogOnFailure" value="true"/>
+      <opt name="maxSizeReponseSavings" value="false"/>
+      <opt name="sizeValueResponseSavings" value="0"/>
+      <opt name="SleepTime" value="0"/>
+      <opt name="FixedSleepTime" value="0"/>
+      <opt name="MinSleepTime" value="0"/>
+      <opt name="MaxSleepTime" value="0"/>
+      <opt name="ThinkTime" value="default"/>
+      <opt name="FixedThinkTime" value="0"/>
+      <opt name="StandardDeviation" value="0"/>
+      <opt name="ThinkTimeMin" value="0"/>
+      <opt name="ThinkTimeMax" value="0"/>
+      <opt name="ReportThinkTime" value="false"/>
+      <opt name="AddThinkTimeToStep" value="false"/>
+      <opt name="IntervalTime" value="0"/>
+      <opt name="FixedIntervalTime" value="0"/>
+      <opt name="MinIntervalTime" value="0"/>
+      <opt name="MaxIntervalTime" value="0"/>
+      <opt name="RampUpUsers" value="0"/>
+      <opt name="RampUpSeconds" value="0"/>
+      <opt name="MaxRampUpTime" value="0"/>
+      <opt name="RampDownUsers" value="0"/>
+      <opt name="RampDownSeconds" value="0"/>
+      <opt name="MaxRampDownTime" value="0"/>
+      <opt name="tolerance" value="0"/>
+      <opt name="global_concurrent_users" value="0"/>
+      <opt name="testnode_concurrent_users" value="0"/>
+    </options>
+    <options type="commandline">
+      <opt name="async" value="false"/>
+    </options>
+    <options type="ds3">
+      <opt name="failOnStatusCodes" value="true"/>
+      <opt name="reuseBrowser" value="false"/>
+      <opt name="takeSnapshotDS3" value="false"/>
+      <opt name="takeScriptSnapshot" value="false"/>
+      <opt name="attachDSFile" value="false"/>
+      <opt name="attachInstantReplay" value="false"/>
+      <opt name="saveRequestAndResponseDS3" value="true"/>
+      <opt name="optionsTimings" value="domComplete"/>
+    </options>
+    <options type="sahi">
+      <opt name="clearCache" value="true"/>
+      <opt name="takeSnapshot" value="false"/>
+      <opt name="debugModeSahi" value="false"/>
+      <opt name="domComplete" value="true"/>
+      <opt name="replaceNextStepReady" value="true"/>
+      <opt name="ajaxTimeout" value="10"/>
+    </options>
+    <options type="har">
+      <opt name="connectionResetMarksTestcaseFailure" value="false"/>
+      <opt name="markRequestAsSteps" value="false"/>
+      <opt name="useHarResponses" value="false"/>
+      <opt name="printDebugInfo" value="false"/>
+      <opt name="doNotStopOnFailure" value="false"/>
+    </options>
+    <options type="testng">
+      <opt name="TestNGtryToCompleteEntireSuite" value="false"/>
+    </options>
+    <options type="lr">
+      <opt name="saveCompleteLrOutputLog" value="false"/>
+    </options>
+    <options type="selenium">
+      <opt name="rc" value="false"/>
+      <opt name="synchronized" value="false"/>
+    </options>
+    <options type="seleniumrc">
+      <opt name="serverport" value="4444"/>
+    </options>
+  </options>
+  <templates>
+    <controller name="Iteration1">
+      <round iterations="1" totalusers="1"/>
+    </controller>
+    <testcase name="Testcase1" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="commandline"/>
+      </test>
+    </testcase>
+    <assertsuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
+    <storesuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
+  </templates>
+  <monitoring enablednodes="true" enabledtarget="false"/>
+  <execution type="functionaltest" subtype="functional">
+    <iteration name="Iteration1" controller="Iteration1">
+      <testcase name="Testcase1" users="1" totalexecutions="1"/>
+    </iteration>
+  </execution>
+  <logs/>
+  <integrations xmlns="www.pushtotest.com/tm5"/>
+  <notifications/>
+</testscenario>
