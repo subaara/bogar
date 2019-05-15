@@ -26,11 +26,9 @@
     <creator/>
     <versions/>
     <categorization/>
-    <links>    </links>
+    <links/>
   </basics>
-  <resources>
-    <resource name="facebookSmokeTest.ds" type="ds" path="{scenario}/facebookSmokeTest.ds"/>
-  </resources>
+  <resources/>
   <testnodes>
     <node name="localhost" location="http://localhost:8080/TMServer/ws/TestNode"/>
   </testnodes>
@@ -38,7 +36,6 @@
     <bundle name="hibernate" version="3.0"/>
     <bundle name="mysql" version="5.1.39"/>
     <bundle name="oracle" version="10.2.0.5"/>
-    <bundle name="ds" version="3.0"/>
   </bundles>
   <datasources/>
   <options>
@@ -92,7 +89,7 @@
       <opt name="attachDSFile" value="false"/>
       <opt name="attachInstantReplay" value="false"/>
       <opt name="saveRequestAndResponseDS3" value="true"/>
-      <opt name="optionsTimings" value="nextStepReady"/>
+      <opt name="optionsTimings" value="domComplete"/>
     </options>
     <options type="sahi">
       <opt name="clearCache" value="true"/>
@@ -127,19 +124,9 @@
     <controller name="Iteration1">
       <round iterations="1" totalusers="1"/>
     </controller>
-    <testcase name="Testcase1  - Commented" importance="normal">
+    <testcase name="Testcase1" importance="normal">
       <test>
-        <run name="Untitled1" langtype="ds3" resource="facebookSmokeTest.ds" method="ds" testclass="Firefox"/>
-      </test>
-    </testcase>
-    <testcase name="Testcase2" importance="normal">
-      <test>
-        <run name="Untitled1" langtype="ds3" resource="facebookSmokeTest.ds" method="ds" testclass="Firefox"/>
-      </test>
-    </testcase>
-    <testcase name="Testcase3 - Commented" importance="normal">
-      <test>
-        <run name="Untitled1" langtype="ds3" resource="facebookSmokeTest.ds" method="ds" testclass="Firefox"/>
+        <run name="Untitled1" langtype="commandline"/>
       </test>
     </testcase>
     <assertsuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
@@ -148,9 +135,7 @@
   <monitoring enablednodes="true" enabledtarget="false"/>
   <execution type="functionaltest" subtype="functional">
     <iteration name="Iteration1" controller="Iteration1">
-      <testcase name="Testcase1  - Commented" users="1" totalexecutions="1" commented="true"/>
-      <testcase name="Testcase2" users="1" totalexecutions="1"/>
-      <testcase name="Testcase3 - Commented" users="1" totalexecutions="1" commented="true"/>
+      <testcase name="Testcase1" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>
