@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase  name= '' description='' author='' version=''>
+<dpl filename='REPOSITORY/Subash/test.csv' exectype='' errorhandling='' type='HashDPL'/>
+<fallback useFallback='false'/>
+<shadowdom useShadowDOM='false'/>
+<step action='log' value='$Name' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='log' value='' selected='true'/>
+</dialect>
+</step>
+</testcase>
