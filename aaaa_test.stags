@@ -20,7 +20,15 @@
 			"description": ""
 		}
 	],
-	"actions": [],
+	"actions": [
+		{
+			"name": "a",
+			"functionString": "/**You can create Custom Actions for Smart Tags here.\n*\t\tAvailable variables are:\n*\t\t\t- element: The element\n*\t\t\t- params: The parameters of the function if any\n*\t\t\t- ds$: Equivalent for jQuery or its alias $\n*\n*\t\tExample: To get the options of a select HTML tag:\n*\n*\t\t\treturn ds$(\"option\", element);\n**/",
+			"arrayHint": "",
+			"previousActions": [],
+			"postActions": []
+		}
+	],
 	"customTags": [],
 	"autoValidations": [],
 	"validators": [],
