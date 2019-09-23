@@ -32,5 +32,15 @@
 	"customTags": [],
 	"autoValidations": [],
 	"validators": [],
-	"extractors": []
+	"extractors": [
+		{
+			"name": "a",
+			"when": "preAction",
+			"value": "",
+			"type": "attribute",
+			"variable": "a",
+			"disabled": false,
+			"postprocessing": "/**You can add JS code here.\n*\t\tUse standard functions to manipulate the variable.\n*\t\t\tVariable must be referenced with $.\n*\t\tUse functions available in JS Edit & Play to extract data.\n*\t\t\tReference of functions is in https://appvance.atlassian.net/wiki/spaces/EN/pages/596967438/DS3+JS+Commands+Reference\n\n*\t\tNote: First line must return value.\n**/\n"
+		}
+	]
 }
