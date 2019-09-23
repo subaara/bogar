@@ -1,0 +1,28 @@
+{
+	"threshold": 0.75,
+	"smartTags": [
+		{
+			"name": "asdsad",
+			"type": "Navigation",
+			"tags": [
+				"a"
+			],
+			"rules": [],
+			"singleton": false,
+			"scanOncePerApp": false,
+			"scanOnePerPage": false,
+			"info": {},
+			"methods": {},
+			"autoValidations": [],
+			"validators": [],
+			"extractors": [],
+			"disabled": false,
+			"description": ""
+		}
+	],
+	"actions": [],
+	"customTags": [],
+	"autoValidations": [],
+	"validators": [],
+	"extractors": []
+}
